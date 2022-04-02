@@ -39,8 +39,16 @@ void solve(){
     vi v;
     vect(v, n);
 
-    
+    srt(v);
 
+    ll ans=0;
+    rep(i, 0, n){
+        if(v[i]>=i+1){
+            ans++;
+        }
+    }
+
+    cout << ans << "\n";
 }
 
 int32_t main() {
