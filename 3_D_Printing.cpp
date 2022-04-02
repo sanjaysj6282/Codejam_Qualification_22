@@ -53,17 +53,17 @@ void solve(){
     rep(i, 0, 4){
         vmin.pb({min(min(v1[i], v2[i]), v3[i]), i});
         sum += vmin[i].ff;
-        cout << vmin[i].ff << " ";
+        // cout << vmin[i].ff << " ";
     }
 
     srt(vmin);
 
     if(sum<1e6){
-        cout << "IMPOSSIBLE";
+        cout << "IMPOSSIBLE\n";
         return;
     }
 
-    ll c, m, y, k;
+    ll c=0, m=0, y=0, k=0;
     ll sumleft=1e6;
     rep(i, 0, 4){
         if(vmin[i].ss==0){
@@ -74,27 +74,29 @@ void solve(){
             }
         }
         else if(vmin[i].ss==1){
-            c=min(vmin[i].ff, sumleft);
-            sumleft-=c;
+            m=min(vmin[i].ff, sumleft);
+            sumleft-=m;
             if(sumleft<=0){
                 break;
             }
         }
         else if(vmin[i].ss==2){
-            c=min(vmin[i].ff, sumleft);
-            sumleft-=c;
+            y=min(vmin[i].ff, sumleft);
+            sumleft-=y;
             if(sumleft<=0){
                 break;
             }
         }
         else if(vmin[i].ss==3){
-            c=min(vmin[i].ff, sumleft);
-            sumleft-=c;
+            k=min(vmin[i].ff, sumleft);
+            sumleft-=k;
             if(sumleft<=0){
                 break;
             }
         }
     }
+
+    cout <<c << " "<< m << " " <<y << " " <<k << "\n"; 
 
 }
 
@@ -105,7 +107,7 @@ int32_t main() {
     cin >> t;
     ll cases=1;
     while (t--) {
-        cout << "Case #" << cases <<":\n";
+        cout << "Case #" << cases <<": ";
         cases++;
         solve();
     }
