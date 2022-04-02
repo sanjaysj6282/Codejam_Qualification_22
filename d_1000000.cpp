@@ -35,7 +35,11 @@ ll n, m, t;
 string s, s1, s2;
 
 void solve(){
-     
+    cin >> n;
+    vi v;
+    vect(v, n);
+
+    
 
 }
 
