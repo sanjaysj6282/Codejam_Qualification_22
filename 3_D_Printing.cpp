@@ -58,7 +58,6 @@ void solve(){
 
     srt(vmin);
 
-
     if(sum<1e6){
         cout << "IMPOSSIBLE";
         return;
@@ -70,6 +69,30 @@ void solve(){
         if(vmin[i].ss==0){
             c=min(vmin[i].ff, sumleft);
             sumleft-=c;
+            if(sumleft<=0){
+                break;
+            }
+        }
+        else if(vmin[i].ss==1){
+            c=min(vmin[i].ff, sumleft);
+            sumleft-=c;
+            if(sumleft<=0){
+                break;
+            }
+        }
+        else if(vmin[i].ss==2){
+            c=min(vmin[i].ff, sumleft);
+            sumleft-=c;
+            if(sumleft<=0){
+                break;
+            }
+        }
+        else if(vmin[i].ss==3){
+            c=min(vmin[i].ff, sumleft);
+            sumleft-=c;
+            if(sumleft<=0){
+                break;
+            }
         }
     }
 
