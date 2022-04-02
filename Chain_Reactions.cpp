@@ -30,6 +30,10 @@ const int M=1e4+3, MOD=1e9+7;
 ll gcd(ll a,ll b) {if(b==0) return a; return gcd(b,a%b); }
 ll lcm(ll a,ll b) {return a/gcd(a,b)*b; }
 
+bool sortbysec(const pi &a, const pi &b){
+    return (a.second < b.second);
+}
+
 // Declaring variables
 ll n, m, t;
 string s, s1, s2;
@@ -44,6 +48,16 @@ void solve(){
     vect(v1, n);
     vect(v2, n);
 
+    vii vp;
+    rep(i, 0, n){
+        vp.pb({v1[i], v2[i]});
+    }
+
+    sort(vp.begin(), vp.end(), sortbysec);
+
+    rep(i, 0, n){
+        cout << v1[i] << " " << v2[i] << "   ";
+    }
 
 
 }
