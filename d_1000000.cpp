@@ -34,9 +34,9 @@ ll lcm(ll a,ll b) {return a/gcd(a,b)*b; }
 ll n, m, t;
 string s, s1, s2;
 
-
 void solve(){
-    cin >> n;
+     
+
 }
 
 int32_t main() {
@@ -44,7 +44,10 @@ int32_t main() {
 
     t=1;
     cin >> t;
+    ll cases=1;
     while (t--) {
+        cout << "Case #" << cases <<": ";
+        cases++;
         solve();
     }
 
