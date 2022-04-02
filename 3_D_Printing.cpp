@@ -43,7 +43,18 @@ string s, s1, s2;
 
 */
 void solve(){
-    cin >> n;
+    vi v1, v2, v3;
+    vect(v1, 3);
+    vect(v2, 3);
+    vect(v3, 3);
+
+    rep(i, 0, 4){
+        rep(j, 0, 4){
+            if(i!=j){
+                
+            }
+        }
+    }
 }
 
 int32_t main() {
