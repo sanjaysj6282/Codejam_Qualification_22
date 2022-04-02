@@ -34,7 +34,14 @@ ll lcm(ll a,ll b) {return a/gcd(a,b)*b; }
 ll n, m, t;
 string s, s1, s2;
 
+/*
+    Idea
 
+    3 Ds but all have to be in same color
+    ith row is i'th printer with 4 catridges
+    total ink to print 1 D is exactly 10^6
+
+*/
 void solve(){
     cin >> n;
 }
@@ -44,7 +51,10 @@ int32_t main() {
 
     t=1;
     cin >> t;
+    ll cases=1;
     while (t--) {
+        cout << "Case #" << cases <<":\n";
+        cases++;
         solve();
     }
 
