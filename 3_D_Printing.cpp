@@ -43,17 +43,24 @@ string s, s1, s2;
 
 */
 void solve(){
-    vi v1, v2, v3, vmin;
-    vect(v1, 3);
-    vect(v2, 3);
-    vect(v3, 3);
+    vi v1, v2, v3;
+    vii vmin;
+    vect(v1, 4);
+    vect(v2, 4);
+    vect(v3, 4);
 
     ll sum=0;
     rep(i, 0, 4){
-        vmin.pb(min(min(v1[i], v2[i]), v3[i]));
-        sum += vmin[i];
-        cout << vmin[i] << " ";
+        vmin.pb({min(min(v1[i], v2[i]), v3[i]), i});
+        sum += vmin[i].ff;
+        cout << vmin[i].ff << " ";
     }
+
+    srt(vmin);
+
+    // rep(i, 0, 4){
+    //     cout << vmin[i].ff << " ";
+    // }
 
     if(sum<1e6){
         cout << "IMPOSSIBLE";
