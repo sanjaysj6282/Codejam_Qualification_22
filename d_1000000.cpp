@@ -43,7 +43,7 @@ void solve(){
 
     ll ans=0;
     rep(i, 0, n){
-        if(v[i]>=i+1){
+        if(v[i]>=ans+1){
             ans++;
         }
     }
