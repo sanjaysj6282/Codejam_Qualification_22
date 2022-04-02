@@ -37,24 +37,30 @@ string s, s1, s2;
 /*
     Idea
 
-    3 Ds but all have to be in same color
+    3 D's but all have to be in same color
     ith row is i'th printer with 4 catridges
     total ink to print 1 D is exactly 10^6
 
 */
 void solve(){
-    vi v1, v2, v3;
+    vi v1, v2, v3, vmin;
     vect(v1, 3);
     vect(v2, 3);
     vect(v3, 3);
 
+    ll sum=0;
     rep(i, 0, 4){
-        rep(j, 0, 4){
-            if(i!=j){
-                
-            }
-        }
+        vmin.pb(min(min(v1[i], v2[i]), v3[i]));
+        sum += vmin[i];
+        cout << vmin[i] << " ";
     }
+
+    if(sum<1e6){
+        cout << "IMPOSSIBLE";
+        return;
+    }
+
+
 }
 
 int32_t main() {
