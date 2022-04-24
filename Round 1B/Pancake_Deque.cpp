@@ -44,7 +44,9 @@ int32_t main() {
 
     t=1;
     cin >> t;
+    ll cnt=1;
     while (t--) {
+        cout << "Case #"<<cnt++<<":";
         solve();
     }
 
