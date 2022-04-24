@@ -53,13 +53,16 @@ void solve(){
         }
         else if(v[i]>=v[j] && v[j]>=mx){
             mx=max(mx, v[j]);
-            j++;
+            j--;
+        }
+        else{
+            break;
         }
         cnt++;
 
     }
 
-    cout << cnt <<endl;
+    cout << cnt+1 <<endl;
 }
 
 int32_t main() {
@@ -69,7 +72,7 @@ int32_t main() {
     cin >> t;
     ll cnt=1;
     while (t--) {
-        cout << "Case #"<<cnt++<<":";
+        cout << "Case #"<<cnt++<<": ";
         solve();
     }
 
