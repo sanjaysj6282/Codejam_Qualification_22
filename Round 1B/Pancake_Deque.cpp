@@ -37,6 +37,29 @@ string s, s1, s2;
 
 void solve(){
     cin >> n;
+    vi v; vect(v, n);
+
+    // deque<ll> dq;
+    ll i=0; ll j=n-1;
+    ll mx=-1;
+    ll cnt=0;
+    while(i<j){
+        if(mx>v[i] && mx>v[j]){
+            break;
+        }
+        if(v[i]<=v[j] && v[i]>=mx){
+            mx=max(mx, v[i]);
+            i++;
+        }
+        else if(v[i]>=v[j] && v[j]>=mx){
+            mx=max(mx, v[j]);
+            j++;
+        }
+        cnt++;
+
+    }
+
+    cout << cnt <<endl;
 }
 
 int32_t main() {
